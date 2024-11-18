@@ -11,6 +11,7 @@ class User(Base):
     first_name          = Column(String, nullable=False)
     last_name           = Column(String, nullable=False)
     profile_picture     = Column(String, nullable=True)  # URL or path to the profile picture
+    password            = Column(String, nullable=False)
 
     def __repr__(self):
         return f"<User(id={self.id}, username={self.username}, first_name={self.first_name}, last_name={self.last_name})>"
